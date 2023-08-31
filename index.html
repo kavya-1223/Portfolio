@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2fccb2ccc3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png"  class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="bgimg">
+                <img src="background.png">
+            </div>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Kavya</span> Gujjarlapudi</h1>
+                <h2> A Web Designer</h2>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/kavya-gujjarlapudi-025886259"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/kavya-1223"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/___.kavya.__/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class=" btn1 btn2">Resume</a>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <p class="para">My name is Kavya Gujjarlapudi, and I am currently a fourth-year student at GITAM University.<br>
+            I have a passion for web development,particularly in the front end domain. With my proficiency<br>
+            in HTML,CSS and Javascript, I enjoy creating visually-appealing and user-friendly websites.<br>
+            However my curiosity and interest in data analysis have led me to explore the field of data <br>
+            analytics. I find the idea of extracting insights from data and using them to make decisions <br>
+            fascinating.</p>
+            <p class="para"> I'm a motivated and ambitious undergraduate student with strong passion for learning.<br>
+                    With a keen eye for detail and a proactive approach, I strive for excellence in every task.<br>
+                    Committed to lifelong learning, I am ready to apply my knowledge and skills to make a<br>
+                    meaningful impact.</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web development</span><br>Designing websites using HTML,CSS and Javascript</li>
+                    <li><span>SQL</span><br> Working with databases with MySql</li>
+                    <li><span>Python</span><br>Python Programming</li>
+                    <li><span>Java</span><br>Java Programming</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Data Science Intern at Smart Knower</span><br>December 2022 - January 2023 </li>
+                    <li><span>Web development Intern at Oasis Infobyte</span><br>March 2023 - April 2023 </li>
+                    <li><span>Python Development Intern at Internpe</span><br>May 2023 - June 2023 </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2020-Current</span><br>Btech CSE at Gitam University, Visakhapatnam</li>
+                    <li><span>2018-2020</span><br>Intermediate at Sri Chaitanya College, Vijayawada</li>
+                    <li><span>2008-2018</span><br>ST.John's Higher Secondary School, Gannavaram</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png" alt="work1">
+                    <div class="layer">
+                       <h3>Landing Page</h3> 
+                       <p>I've created a landing page for the company Internia, which offers internships to students.</p>
+                       <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="work-2.png" alt="work2">
+                    <div class="layer">
+                        <h3>Temperature Unit Converter</h3> 
+                        <p>I've created a Temperature Unit Converter website that converts the given unit to specified unit.</p>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                     </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+                <div class="contact-1">
+                    <p><i class="fa-solid fa-envelope"></i>gujjarlapudikavya25@gmail.com</p>
+                    <p class="ph"><i class="fa-solid fa-phone"></i>9948770699</p>
+                </div>
+                <div class="contact-2">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+        </div> 
+    </div>
+
+    <div class="copyright">
+        <p>Copyright @ Kavya</p>
+    </div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyYZlI1Y2aRuvjaQPJdUKtn1phso2hSC77HnkAIV0L1ySXJueOnVZlKpAz5aJTf8C7B/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
